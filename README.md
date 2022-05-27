@@ -6,6 +6,9 @@
 In order to access this repository, the user needs to close it from GitHub using the command "git clone git@github.com:kaylab78/work-day-scheduler.git" in their command line interface.
 
 ## Usage
+To view the repository in GitHub, [click here](https://github.com/kaylab78/work-day-scheduler).
+
+To view the deployed website, [click here](https://kaylab78.github.io/work-day-scheduler/).
 
 ## Credits
 The [original starter code](https://github.com/coding-boot-camp/super-disco) for this project was cloned from Xandromus.
