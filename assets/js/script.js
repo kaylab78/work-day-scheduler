@@ -1,4 +1,4 @@
 var currentDayEl = document.getElementById("currentDay");
-var now = moment();
+var now = moment().format("LLLL");
 
 currentDayEl.textContent = now;
