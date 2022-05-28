@@ -28,7 +28,8 @@ function saveDescription() {
     console.log("Clicked!");
 };
 
-$(".saveBtn").click(saveDescription);
+// Event delegation. I expect this to save the entire row to localStorage.
+$("div.row").on("click", "button", saveDescription);
 
 // Refresh the page and the saved events persist
 function loadDescription() {
