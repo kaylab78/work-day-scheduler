@@ -33,6 +33,14 @@ $(document).ready(function() {
 // Check if there are already events saved in localStorage. If none, set the descriptionEl to empty.
 function loadText() {
     $("#8 .description").val(localStorage.getItem("8"));
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
     // textEl.value = JSON.parse(localStorage.getItem("text"))
     // if (!textEl) {
     //     textEl = {}
