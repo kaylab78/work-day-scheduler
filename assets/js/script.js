@@ -50,17 +50,17 @@ function checkTime() {
 
         // If the time block id is less than the current hour, then the time is in the past. Add class past.
         if (blockHour < currentHour) {
-            $(this).addClass("past");
+            $(this).next().addClass("past");
         
         // If the time block id is equal to the current hour, then the time is in the present. Add class present.
         } else if (blockHour === currentHour) {
             // might need to remove class past
-            $(this).addClass("present");
+            $(this).next().addClass("present");
         
         // If the time block id is greater than the current hour, then the time is in the future. Add class future.
         } else {
             // might need to remove class past and remove class present (separate)
-            $(this).addClass("future");
+            $(this).next().addClass("future");
         }
     })
 }
