@@ -14,11 +14,11 @@ currentDayEl.textContent = now;
 var meetings = [
     {
         hour: "8:00 pm",
-        description: ""
+        description: []
     },
     {
         hour: "9:00 am",
-        description: ""
+        description: []
     }
 ];
 
@@ -28,9 +28,9 @@ function createDescription() {
 
     // Click in the description area to add or edit the text
     // $(descriptionEl).click(function(){});
-    $(".description").on("click", "textarea", function() {
-        console.log("Clicked!");
-    })
+    // $(".description").on("click", "textarea", function() {
+    //     console.log("Clicked!");
+    // })
 
     loadDescription();
 }
