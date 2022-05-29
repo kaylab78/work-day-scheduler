@@ -43,8 +43,8 @@ function loadText() {
 function saveText() {
     // push() new text to the empty meetings[i].description array
     // meetings[0].description.push(textEl.value);
-    var value = $(this).parent().prev(".description").val();
-    let time = $(this).parent().prev().prev().parent().attr("id");
+    var value = $(this).prev(".description").val();
+    let time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
     // localStorage.setItem("text", JSON.stringify(textEl.value));
     // localStorage.setItem("text", JSON.stringify(meetings[0]));
