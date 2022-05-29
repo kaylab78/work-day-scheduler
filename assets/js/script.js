@@ -38,12 +38,12 @@ function createDescription() {
 
 $(document).ready(function() {
     timeBlockEl.append(meetings[0].hour);
-    // loadText();
+    loadText();
 });
 
 // Check if there are already events saved in localStorage. If none, set the descriptionEl to empty.
 function loadText() {
-    textEl.textContent = JSON.parse(localStorage.getItem("text"));
+    textEl.value = JSON.parse(localStorage.getItem("text"))
     // if (!textEl) {
     //     textEl = {}
     // };
