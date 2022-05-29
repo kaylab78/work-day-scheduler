@@ -5,9 +5,7 @@ var saveEl = document.querySelector(".saveBtn");
 var textEl = document.querySelector("textarea");
 
 // Print current date and time to header.
-var now = moment().format("LLLL");
-currentDayEl.textContent = now;
-
+currentDayEl.textContent = moment().format("LLLL");
 
 // When the page is fully loaded, load the previously saved text and check to see which hours are in the past, present, future.
 $(document).ready(function() {
@@ -28,11 +26,12 @@ function loadText() {
     $("#16 .description").val(localStorage.getItem("16"));
 };
 
-// Click the save button to save the text and the time block id in local storage.
+// Click the save button to save the text and the time block id in local storage. The time at the top of the page is also refreshed.
 function saveText() {
     var text = $(this).prev(".description").val();
     let time = $(this).parent().attr("id");
     localStorage.setItem(time, text);
+    currentDayEl.textContent = moment().format("LLLL");
 };
 
 $("div.row").on("click", "button", saveText);
@@ -65,5 +64,5 @@ function checkTime() {
     })
 }
 
-// Check the current time every minute. 
-setInterval(checkTime, 60000);
+// Run the checkTime function every 30 seconds. 
+setInterval(checkTime, 30000);
