@@ -14,7 +14,7 @@ currentDayEl.textContent = now;
 // Click in the block to enter an event
 var meetings = [
     {
-        hour: "8:00 pm",
+        hour: "8:00 am",
         description: []
     },
     {
@@ -43,18 +43,18 @@ $(document).ready(function() {
 
 // Check if there are already events saved in localStorage. If none, set the descriptionEl to empty.
 function loadText() {
-    textEl = JSON.parse(localStorage.getItem("text"));
-
-    if (!textEl) {
-        textEl = {}
-    };
+    textEl.textContent = JSON.parse(localStorage.getItem("text"));
+    // if (!textEl) {
+    //     textEl = {}
+    // };
 };
 
 // Click the save button to save event in local storage
 function saveText() {
     // push() new text to the empty meetings[i].description array
     meetings[0].description.push(textEl.value);
-    localStorage.setItem("text", JSON.stringify(textEl));
+    localStorage.setItem("text", JSON.stringify(textEl.value));
+    // localStorage.setItem("text", JSON.stringify(meetings[0]));
 };
 
 // Event delegation. Will this save the entire row to localStorage?
