@@ -5,7 +5,7 @@ var saveEl = document.querySelector(".saveBtn");
 var textEl = document.querySelector("textarea");
 
 // Print current date and time to header.
-currentDayEl.textContent = moment().format("LLLL");
+currentDayEl.textContent = moment().format("LL");
 
 // When the page is fully loaded, load the previously saved text and check to see which hours are in the past, present, future.
 $(document).ready(function() {
@@ -31,7 +31,6 @@ function saveText() {
     var text = $(this).prev(".description").val();
     let time = $(this).parent().attr("id");
     localStorage.setItem(time, text);
-    currentDayEl.textContent = moment().format("LLLL");
 };
 
 $("div.row").on("click", "button", saveText);
